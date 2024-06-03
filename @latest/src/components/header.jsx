@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
-import Aboutme from "./aboutme";
+import Aboutme from "./Aboutme";
 
 export default function Header() {
     return (

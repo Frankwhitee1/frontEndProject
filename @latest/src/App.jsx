@@ -1,24 +1,20 @@
-import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { getRandomBooks } from './fetch'
 import Home from './components/Home'
-import Header from './components/header'
-
+import Header from './components/Header'
+import Aboutme from './components/Aboutme'
 
 function App() {
- 
   return (
-   <>
-   <Router>
-    <Header/>
-      <Routes>
-        <Route exact path="/" element={<Home/>}/>
-
-      </Routes>
-   </Router>
- 
-  </>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/aboutme" element={<Aboutme />} />
+        </Routes>
+      </Router>
+    </>
   )
 }
 
