@@ -1,15 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import { getRandomBooks } from './fetch'
+import Home from './components/Home'
+import Header from './components/header'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <>
-      
-    </>
+   <>
+   <Router>
+    <Header/>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+
+      </Routes>
+   </Router>
+ 
+  </>
   )
 }
 
